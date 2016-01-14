@@ -66,7 +66,9 @@
 
 
 %
-\documentclass[10pt,journal,compsoc]{IEEEtran}
+\documentclass[conference]{IEEEtran}
+
+
 % If IEEEtran.cls has not been installed into the LaTeX system files,
 % manually specify the path to it like:
 % \documentclass[10pt,journal,compsoc]{../sty/IEEEtran}
@@ -459,8 +461,7 @@ colorlinks=true,linkcolor={black},citecolor={black},urlcolor={black},
 pdftitle={Bare Demo of IEEEtran.cls for Computer Society Journals},%<!CHANGE!
 pdfsubject={Typesetting},%<!CHANGE!
 pdfauthor={Michael D. Shell},%<!CHANGE!
-pdfkeywords={Computer Society, IEEEtran, journal, LaTeX, paper,
-             template}}%<^!CHANGE!
+pdfkeywords={requirements update, requirements evolution, traceability}}%<^!CHANGE!
 %\ifCLASSINFOpdf
 %\usepackage[\MYhyperrefoptions,pdftex]{hyperref}
 %\else
@@ -528,7 +529,7 @@ pdfkeywords={Computer Society, IEEEtran, journal, LaTeX, paper,
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{Bare Advanced Demo of IEEEtran.cls for\\ IEEE Computer Society Journals}
+\title{Supporting requirements update \\ during software evolution}
 %
 %
 % author names and IEEE memberships
@@ -552,9 +553,9 @@ pdfkeywords={Computer Society, IEEEtran, journal, LaTeX, paper,
 % journal papers have the author affiliations above the "Manuscript
 % received ..."  text while in non-compsoc journals this is reversed. Sigh.
 
-\author{Michael~Shell,~\IEEEmembership{Member,~IEEE,}
-        John~Doe,~\IEEEmembership{Fellow,~OSA,}
-        and~Jane~Doe,~\IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
+\author{Jia~Nie,~\IEEEmembership{Member,~IEEE,}
+        Hongyu~Kuang,~\IEEEmembership{Fellow,~OSA,}
+        and~Hao~Hu,~\IEEEmembership{Life~Fellow,~IEEE}% <-this % stops a space
 \IEEEcompsocitemizethanks{\IEEEcompsocthanksitem M. Shell was with the Department
 of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
 GA, 30332.\protect\\
@@ -586,7 +587,7 @@ E-mail: see http://www.michaelshell.org/contact.html
 
 % The paper headers
 \markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
-{Shell \MakeLowercase{\textit{et al.}}: Bare Advanced Demo of IEEEtran.cls for IEEE Computer Society Journals}
+{Shell \MakeLowercase{\textit{et al.}}: sd}
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
 % 
@@ -625,12 +626,14 @@ E-mail: see http://www.michaelshell.org/contact.html
 % in the abstract or keywords.
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-The abstract goes here.
+Outdated requirements detection is an emerging technology \cite{ben2015supporting}, for automatically identifying the requirements that are no longer aligned with stakeholders' needs. The technology reduces the effort required to maintain the requirements specification and thus encourage maintainers to keep the specification up-to-date when a software system evolves.\\
+\indent Current detection techniques work by extracting a set of keywords from source code changes, and then tracing these keywords to the requirements using an Information Retrieval (IR) based approach.
+\cite{lethbridge2003software}
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
 \begin{IEEEkeywords}
-Computer Society, IEEE, IEEEtran, journal, \LaTeX, paper, template.
+Requirements update, requirements evolution, traceability.
 \end{IEEEkeywords}}
 
 
@@ -698,14 +701,32 @@ for IEEE Computer Society journal papers produced under \LaTeX\ using
 IEEEtran.cls version 1.8b and later.
 % You must have at least 2 lines in the paragraph with the drop letter
 % (should never be an issue)
-I wish you the best of success.
+I wish you the best of success.\\
+This paper is organised as follows:
+
+\section{Our approach}
+
+\section{Evaluation}
+
+\section{Related Work}
+
+
+
 
 \hfill mds
  
 \hfill August 26, 2015
 
 \subsection{Subsection Heading Here}
-Subsection text here.
+Subsection text here.\\
+\begin{center}
+zhen bushi dongxi
+\end{center}
+
+\begin{enumerate}
+\item niejia
+\item wangqi
+\end{enumerate}
 
 % needed in second column of first page if using \IEEEpubid
 %\IEEEpubidadjcol
@@ -813,9 +834,8 @@ Subsubsection text here.
 
 
 \section{Conclusion}
-The conclusion goes here.
-
-
+The conclusion goes here .
+doyou know me
 
 
 
@@ -853,10 +873,6 @@ Appendix two text goes here.
   \section*{Acknowledgment}
 \fi
 
-
-The authors would like to thank...
-
-
 % Can use something like this to put references on a page
 % by themselves when using endfloat and the captionsoff option.
 \ifCLASSOPTIONcaptionsoff
@@ -887,13 +903,19 @@ The authors would like to thank...
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
-\begin{thebibliography}{1}
 
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to {\LaTeX}}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+\bibliographystyle{IEEEtran}
+\bibliography{re16rf}
 
-\end{thebibliography}
+
+
+% Jia
+% \begin{thebibliography}{2}
+
+% \bibitem{IEEEhowto:kopka}
+% H.~Kopka and P.~W. Daly, \emph{A Guide to {\LaTeX}}, 3rd~ed.\hskip 1em plus
+%   0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+% \end{thebibliography}
 
 % biography section
 % 
@@ -906,7 +928,7 @@ H.~Kopka and P.~W. Daly, \emph{A Guide to {\LaTeX}}, 3rd~ed.\hskip 1em plus
 %\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
 % or if you just want to reserve a space for a photo:
 
-\begin{IEEEbiography}{Michael Shell}
+\begin{IEEEbiography}{Jia Nie}
 Biography text here.
 \end{IEEEbiography}
 
